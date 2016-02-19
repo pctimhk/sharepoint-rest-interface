@@ -29,6 +29,8 @@ public interface SharepointManager {
     List<SharepointUser> findAllUsers(String username, String password) throws IOException;
 
     List<SharepointSearchResult> search(String username, String password, String searchWord) throws IOException;
+    
+    void UploadFile(String username, String password, String folderRelativeURL, String fileName, byte[] fileData) throws Exception;
 
     /**
      * This method tests the sharepoint connection and credentials
