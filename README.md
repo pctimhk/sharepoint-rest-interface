@@ -10,6 +10,7 @@ lib directory. You can then use as follows:
     SharepointService service = new SharepointService(my.sharepoint.server.com, 443, myDomain);
     List<SharepointUser> users = service.findAllUsers(username, password);
     List<SharepointSearchResult> results = sharepointManager.search(username, password, "searchPhrase")
+    sharepointManager.UploadFile(username, password, folderRelativeURL, fileName, fileData);
     ...
 ```
 
@@ -21,7 +22,6 @@ You can also wire in the bean using spring by adding this to your application-co
         <constructor-arg value="myDomain"/>
     </bean>
 ```
-
 
 *So far the only methods that are available are as follows:*
 
